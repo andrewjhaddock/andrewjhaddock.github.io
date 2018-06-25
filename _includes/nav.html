@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+<ul class="menu">
+{% for andrew in site.data.menu %}
+    {% if andrew.subcategories != null %}
+    <li><a href="{{ andrew.href }}" class="page-link">{{ andrew.title }}</a>
+    <ul class="sub-menu">
+    {% for subcategory in andrew.subcategories %}
+    <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+     <li><a href="{{ andrew.href }}" class="page-link">{{ andrew.title }}</a>
+    {% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
