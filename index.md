@@ -3,7 +3,7 @@ layout: page
 title: About
 order: 1
 ---
-<img align="right" src="https://i.imgur.com/sUQStsQ.jpg" width="25%" height="25%">
+<img align="right" src="https://i.imgur.com/TMEZhHn.jpg" width="25%" height="25%">
 
 **neural engineer** / **data scientist** / **biomedical engineer** 
 
